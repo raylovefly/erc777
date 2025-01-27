@@ -1,0 +1,13 @@
+.exit
+npx hardhat run scripts/deploy.js --network localhost
+await registry.getInterfaceImplementer(deployer.address, interfaceHash)
+await registry.setInterfaceImplementer(deployer.address, interfaceHash, deployer.address)
+const interfaceHash = ethers.utils.keccak256(ethers.utils.toUtf8Bytes("TestInterface"))
+await registry.getManager(deployer.address)
+const [deployer] = await ethers.getSigners()
+const registry = await ethers.getContractAt("ERC1820Registry", "0xa38BBaD0A6Ad97420F85b7aD0E4B5306ba4F4F19")
+await ethers.provider.getCode("0xa38BBaD0A6Ad97420F85b7aD0E4B5306ba4F4F19")
+.exit
+npx hardhat run scripts/deploy-erc1820.js --network dfc
+await ethers.provider.getCode("0x1820a4B7618BdE71Dce8cdc73aAB6C95905faD24")
+const ERC1820Registry = await ethers.getContractAt("IERC1820Registry", "0x1820a4B7618BdE71Dce8cdc73aAB6C95905faD24")
