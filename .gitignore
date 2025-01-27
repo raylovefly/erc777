@@ -1,2 +1,37 @@
+# 环境变量
+.env
+.env.*
+
+# 日志文件
+logs
+*.log
+
+# 依赖目录
 node_modules
-node_modules
+coverage
+coverage.json
+typechain
+typechain-types
+
+# Hardhat 文件
+cache
+artifacts
+
+# IDE 配置
+.vscode
+.idea
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+.directory
+.Trash-*
+
+# 测试文件
+test-accounts.json
+test-*.json
+
+# 编译输出
+dist
+build
